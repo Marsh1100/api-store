@@ -3,9 +3,8 @@ using System.Collections.Generic;
 
 namespace Core.Entities;
 
-public partial class Driver
+public partial class Driver : BaseEntity
 {
-    public int Id { get; set; }
 
     public string Name { get; set; }
 

@@ -4,10 +4,8 @@ using Core.Entities;
 
 namespace Core.Entities;
 
-public partial class Team
+public partial class Team : BaseEntity
 {
-    public int Id { get; set; }
-
     public string Name { get; set; }
 
     public virtual ICollection<Driver> Drivers { get; set; } = new List<Driver>();

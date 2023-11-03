@@ -13,7 +13,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<FormulaContext>(optionBuilder =>
 {
-    string connectionString = builder.Configuration.GetConnectionString("ConnectionStrings");
+    string connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
     optionBuilder.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
 });
 
