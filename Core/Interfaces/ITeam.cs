@@ -8,5 +8,5 @@ namespace Core.Interfaces;
 
 public interface ITeam : IGenericRepository<Team>
 {
-    
+    Task<string> AddDriver(int idDriver, int idTeam);
 }

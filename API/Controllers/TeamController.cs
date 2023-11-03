@@ -51,6 +51,15 @@ public class TeamController : ApiBaseController
         return CreatedAtAction(nameof(Post), new{id=result.Id}, result);
     }
 
+    [HttpPost("addDriver")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult> Post([FromBody] AddDriverDto dto)
+    {
+        var result = await _unitOfWork.Teams.AddDriver(dto.IdDriver, dto.IdTeam);
+       
+        return Ok(result);
+    }
 
     [HttpPut()]
     [ProducesResponseType(StatusCodes.Status200OK)]
