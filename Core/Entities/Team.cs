@@ -10,7 +10,7 @@ public partial class Team
 
     public string Name { get; set; }
 
-    public virtual ICollection<Driver> IdDrivers { get; set; } = new List<Driver>();
+    public virtual ICollection<Driver> Drivers { get; set; } = new List<Driver>();
     public ICollection<TeamDriver> TeamDrivers{ get; set; }
     
 }
